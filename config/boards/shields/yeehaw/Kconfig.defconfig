@@ -1,0 +1,10 @@
+
+if SHIELD_YEEHAW
+
+config ZMK_KEYBOARD_NAME
+	default "YEEHAW"
+
+config ZMK_KSCAN_DIRECT_POLLING
+	default y
+	
+endif

@@ -33,29 +33,29 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Lily58 Left)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=lily58_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Lily58 DTS File
+      - name: West Build (Twoyo Left)
+        run: west build -s zmk/app -b nice_nano -- -DSHIELD=twoyo_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: Twoyo DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
-      - name: Lily58 Left Kconfig file
+      - name: Twoyo Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 lily58_left_nice_nano.uf2
-      - name: Archive (Lily58 Left)
+        run: cp build/zephyr/zmk.uf2 twoyo_left_nice_nano.uf2
+      - name: Archive (Twoyo Left)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: lily58_left_nice_nano.uf2
-      - name: West Build (Lily58 Right)
-        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=lily58_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          path: twoyo_left_nice_nano.uf2
+      - name: West Build (Twoyo Right)
+        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=twoyo_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
 
-      - name: Lily58 Right Kconfig file
+      - name: Twoyo Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 lily58_right_nice_nano.uf2
-      - name: Archive (Lily58 Right)
+        run: cp build/zephyr/zmk.uf2 twoyo_right_nice_nano.uf2
+      - name: Archive (Twoyo Right)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: lily58_right_nice_nano.uf2
+          path: twoyo_right_nice_nano.uf2

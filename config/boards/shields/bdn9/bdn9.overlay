@@ -1,0 +1,30 @@
+#include "bdn9.dtsi"
+
+/ {
+	chosen {
+		zmk,kscan = &kscan0;
+	};
+
+	kscan0: kscan_0 {
+		compatible = "zmk,kscan-gpio-direct";
+
+		label = "KSCAN";
+
+		input-gpios
+			= <&gpio0 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&gpio0 27 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&gpio0 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&gpio0 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&gpio0 30 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			, <&gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+			;
+	};
+
+};
+
+&left_encoder {
+    status = "okay";
+};
