@@ -1,9 +1,0 @@
-
-if SHIELD_M0110A
-
-config ZMK_KEYBOARD_NAME
-	default "M0110A"
-
-config ZMK_KSCAN_DIRECT_POLLING
-	default y
-endif

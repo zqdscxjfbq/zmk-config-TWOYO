@@ -1,9 +1,0 @@
-
-if SHIELD_APPLE
-
-config ZMK_KEYBOARD_NAME
-	default "apple?"
-
-config ZMK_KSCAN_DIRECT_POLLING
-	default y
-endif

@@ -1,9 +1,0 @@
-
-if SHIELD_J64
-
-config ZMK_KEYBOARD_NAME
-	default "Jacob's 64"
-
-config ZMK_KSCAN_DIRECT_POLLING
-	default y
-endif
