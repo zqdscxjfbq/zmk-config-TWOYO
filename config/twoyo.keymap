@@ -22,7 +22,7 @@
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | TAB  |  A  |  S  |  D  |  F  |  G  |    |  H  |  J   |  K  |  L  |   ENTER   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   |  ,  |  .  |  LOWER   |
-// | CTL | GUI | ALT |  | LT(RAISE,SPC) |        | SPC |       | ALT | GUI  | CTL |
+// | CTL | GUI | RAISE |    | SPC |              | SPC |       | ALT | GUI  | CTL |
                         bindings = <
    &kp ESC  &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U  &kp I  &kp O  &kp P   &kp BSPC
    &kp TAB &kp A  &kp S &kp D &kp F &kp G        &kp H &kp J  &kp K     &kp L     &kp ENTER
@@ -53,7 +53,7 @@
                         bindings = <
    &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5   &kp N6 &kp N7  &kp N8 &kp N9 &kp N0 &trans
    &trans &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp MINUS      &kp LBKT &kp RBKT &kp SQT &kp SEMI  &trans 
-   &trans &none    &none  &none    &none    &kp EQUAL      &kp BSLH    &kp FSLH    &trans  &trans &trans
+   &trans &none    &none  &kp DEL    &none    &kp EQUAL      &kp BSLH    &kp FSLH    &trans  &trans &trans
    &trans &trans &trans                     &trans          &trans              &trans &trans &trans
                         >;
                 };
